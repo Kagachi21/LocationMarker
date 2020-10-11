@@ -33,27 +33,21 @@
     <span>Dashboard</span></a>
 </li>
 
-<!-- <li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url('rute');?>">
+<li class="nav-item">
+  <a class="nav-link" href="<?php echo base_url('MarkerMap');?>">
     <i class="fas fa-fw fa fa-map-marker"></i>
-    <span>Request</span></a>
+    <span>Marker Map</span></a>
 </li>
 
 <li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url('Data_kendaraan');?>">
+  <a class="nav-link" href="<?php echo base_url('Form_data');?>">
     <i class="fas fa-fw fa fa-truck"></i>
-    <span>Kendaraan</span></a>
+    <span>Form Data</span></a>
 </li>
 
-<li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url('History');?>">
-    <i class="fas fa-fw fa-chart-area"></i>
-    <span>History</span></a>
-</li> -->
-
 
 <li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url('admin');?>">
+  <a class="nav-link" href="<?php echo base_url('Data_admin');?>">
     <i class="fas fa-fw fa fa-users"></i>
     <span>Data Admin</span></a>
 </li>
