@@ -23,5 +23,10 @@
   <link href="<?php echo base_url('assets/sbadmin/vendor/datatables/dataTables.bootstrap4.min.css')?>" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo base_url('assets/sbadmin/css/style.css')?>">
 
+  <link rel="stylesheet" href="<?= base_url(); ?>/assets/leaflet/leaflet.css" />
+  <script src="<?= base_url(); ?>/assets/leaflet/leaflet.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
   
 </head>
