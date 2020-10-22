@@ -12,23 +12,32 @@ class Login extends CI_Controller{
       $this->load->view('login_admin');
     }
 
-    public function cek_log(){
-        $username = $this->input->post('txt_user');
-        $password = $this->input->post('txt_pass');
-        $cek = $this->Admin_model->login($username,$password,'login')->result();
-        if($cek != FALSE){
-            foreach ($cek as $row){
-                $user = $row->username;
-                $level = $row->level;
-            }
-            $this->session->set_userdata('session_admin',$user);
-            $this->session->set_userdata('session_level',$level);
-            redirect('dashboard');
-        }else{
-            $this->load->view('login_admin');
-            // echo "username atau password salah";
-        }
-    }
+    public function cek_login(){
+		$username=htmlspecialchars($this->input->post('username',TRUE),ENT_QUOTES);
+		$password=htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES);
+  
+		$cek_login=$this->Admin_model->loginku($username,$password);
+  
+		if($cek_login->num_rows() > 0){ //jika login sebagai mahasiswa
+					  $data=$cek_login->row_array();
+			  $this->session->set_userdata('masuk',TRUE);
+					  if($data['id_level']=='1'){
+					$this->session->set_userdata('id',$data['id_login']);
+					$this->session->set_userdata('username',$data['username']);
+					redirect('dashboard');
+  
+					  }elseif($data['id_level']=='2'){
+					$this->session->set_userdata('id',$data['id_login']);
+						  $this->session->set_userdata('username',$data['username']);
+					redirect('Staff/dashboard');
+					  }
+  
+			  }else{  // jika username dan password tidak ditemukan atau salah
+					  $url=base_url('login');
+					echo $this->session->set_flashdata('msg','Username Atau Password Salah');
+					  redirect($url);
+			}
+  }
     
     function logout(){
         $this->session->sess_destroy();

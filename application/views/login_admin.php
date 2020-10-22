@@ -1,65 +1,62 @@
-<body class="bg-gradient-success">
-
-	<div class="container up">
-
-		<!-- Outer Row -->
-		<div class="row justify-content-center">
-
-			<div class="col-xl-10 col-lg-12 col-md-9">
-
-				<div class="card o-hidden border-0 shadow-lg my-5" data-aos="fade">
-					<div class="card-body p-0">
-						<!-- Nested Row within Card Body -->
-						<div class="row">
-							<div class="col-lg-6 d-none d-lg-block"> <image src="assets/sbadmin/img/polisi.png" width=475 height=500></div>
-							<div class="col-lg-6">
-								<div class="p-5">
-									<div class="text-center">
-										<h1 class="h4 text-gray-900 mb-4">Selamat Datang!</h1>
-									</div>
-									
-									<form action="<?php echo base_url('login/cek_log'); ?>" class="user needs-validation" method="POST" novalidate >
-
-										<!-- email -->
-										<div class="form-group">
-										<input type="text" class="form-control form-control-user" id="username" aria-describedby="username" placeholder="Username..." name="txt_user">
-											<div class="invalid-feedback">
-												Harap isi alamat email anda.
-											</div>
-										</div>
-										<div class="form-group">
-										<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="txt_pass">
-											<div class="invalid-feedback">
-												Harap isi password anda.
-											</div>
-										</div>
-                      
-
-										<input type="submit" class="btn btn-primary btn-user btn-block" value="Login"
-											name="submit_login">
-
-										<hr>
-										<a href="<?= base_url(); ?>" class="btn btn-google btn-user btn-block">
-											<i class="fas fa-home"></i> Kembali Ke Homepage
-										</a>
-									</form>
-
-									<hr>
-
-									<div class="text-center">
-										<a class="small" href="<?= base_url('password'); ?>">Lupa Password?</a>
-									</div>
-									<div class="text-center">
-										<a class="small" href="<?= base_url('admin/register_admin'); ?>">Buat Akun!</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+<?php require('login/head.php')?>
+<body>
+	<div class="limiter">
+		<div class="container-login100">
+		<div class="login100-pic js-tilt" data-tilt>
+					<img src="<?php echo base_url('assets/loginv1/images/Polda_Jatim.png'); ?>" width=110 height=150 alt="IMG">
 				</div>
-
+			<div class="login-title">
+				<h1>Jarkom Smartzone Polda Jatim</h1>
 			</div>
+			<div class="login100-pic2 js-tilt" data-tilt>
+					<img src="<?php echo base_url('assets/loginv1/images/TIK_Polri.png'); ?>" width=150 height=150 alt="IMG">
+				</div>
+			<div class="wrap-login100">
+				<form action="<?php echo base_url('login/cek_login'); ?>" class="login100-form validate-form" method="POST" novalidate>
+					<span class="login100-form-title">
+						LOGIN
+					</span>
 
+					<div class="wrap-input100">
+						<input class="input100" type="text" name="username" placeholder="Username...">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 ">
+						<input class="input100" type="password" name="password" placeholder="Password...">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="#">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
 		</div>
-
 	</div>
+	
+	<?php require('login/js.php')?>

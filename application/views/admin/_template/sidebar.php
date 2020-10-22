@@ -3,10 +3,11 @@
 
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-  <div class="sidebar-brand-icon rotate-n-15">
-    <i class="fas fa-laugh-wink"></i>
-  </div>
+  <!-- <div class="sidebar-brand-icon rotate-n-15"> -->
+  <img src="<?php echo base_url('assets/loginv1/images/Polda_Jatim.png')?>" width=50 height=70 alt="IMG">
+  <!-- </div> -->
   <div class="sidebar-brand-text mx-3">Kapolda Jatim</div>
+  <img src="<?php echo base_url('assets/loginv1/images/TIK_Polri.png')?>" width=50 height=70 alt="IMG">
 </a>
 
 <!-- Divider -->
@@ -29,53 +30,43 @@
 <!-- Nav Item - Charts -->
 <li class="nav-item">
   <a class="nav-link" href="<?php echo base_url('dashboard');?>">
-    <i class="fas fa-fw fa fa-home"></i>
+    <i class="fas fa-fw fa-home"></i>
     <span>Dashboard</span></a>
 </li>
 
+<li class="nav-item">
+  <a class="nav-link" href="<?php echo base_url('MarkerMap');?>">
+    <i class="fas fa-fw fa-map-marker"></i>
+    <span>Marker Map</span></a>
+</li>
+
 <!-- <li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url('rute');?>">
-    <i class="fas fa-fw fa fa-map-marker"></i>
-    <span>Request</span></a>
-</li>
-
-<li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url('Data_kendaraan');?>">
+  <a class="nav-link" href="<?php echo base_url('Tower');?>">
     <i class="fas fa-fw fa fa-truck"></i>
-    <span>Kendaraan</span></a>
-</li>
-
-<li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url('History');?>">
-    <i class="fas fa-fw fa-chart-area"></i>
-    <span>History</span></a>
+    <span>Tower</span></a>
 </li> -->
 
+  <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-map"></i>
+          <span>Data Lokasi</span>
+        </a>
+        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Data Tower:</h6>
+            <a class="collapse-item" href="<?php echo base_url('InfoLokasi');?>">Info Lokasi</a>
+            <a class="collapse-item" href="<?php echo base_url('Tower');?>">Tower</a>
+            <a class="collapse-item" href="<?php echo base_url('Combiner');?>">Combiner</a>
+            <a class="collapse-item" href="<?php echo base_url('Convensional');?>">Convensional</a>
+          </div>
+        </div>
+      </li>
 
 <li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url('admin');?>">
+  <a class="nav-link" href="<?php echo base_url('Data_admin');?>">
     <i class="fas fa-fw fa fa-users"></i>
     <span>Data Admin</span></a>
 </li>
-
-
-<!-- Nav Item - Charts -->
-<?php //echo '<li class="nav-item">
-  //<a class="nav-link" href="'.base_url('admin/getPaket').'">
-    //<i class="fas fa-fw fa-chart-area"></i>
-    //<span>Data Paket Tour</span></a>
-//</li>';?>
-
-<!-- Nav Item - Charts -->
-<?php //echo '<li class="nav-item">
-  //<a class="nav-link" href="'.base_url('request/dtrequest').'">
-    //<i class="fas fa-fw fa-chart-area"></i>
-    //<span>Data Request Paket Tour</span></a>
-//</li>';?> 
-
-  <!-- Nav Item - Charts -->
-
-
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">
