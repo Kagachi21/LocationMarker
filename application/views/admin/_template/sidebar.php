@@ -40,12 +40,6 @@
     <span>Marker Map</span></a>
 </li>
 
-<!-- <li class="nav-item">
-  <a class="nav-link" href="<?php echo base_url('Tower');?>">
-    <i class="fas fa-fw fa fa-truck"></i>
-    <span>Tower</span></a>
-</li> -->
-
   <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-map"></i>
@@ -55,7 +49,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Data Tower:</h6>
             <a class="collapse-item" href="<?php echo base_url('InfoLokasi');?>">Info Lokasi</a>
-            <a class="collapse-item" href="<?php echo base_url('Tower');?>">Tower</a>
+            <a class="collapse-item" href="<?php echo base_url('TipeTower');?>">Tower</a>
             <a class="collapse-item" href="<?php echo base_url('Combiner');?>">Combiner</a>
             <a class="collapse-item" href="<?php echo base_url('Convensional');?>">Convensional</a>
           </div>

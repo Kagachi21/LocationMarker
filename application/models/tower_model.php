@@ -14,6 +14,15 @@ class tower_model extends CI_Model{
         return $query;
     }
 
+    function edit_data($where,$table){
+        return $this->db->get_where($table,$where);
+    }
+
+    function hapus_data($where,$table){
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
+
     function tampil_combin(){
         $this->db->select('*');
         $this->db->from('combiner');
@@ -21,11 +30,20 @@ class tower_model extends CI_Model{
         return $query;
     }
 
+    function update_data($where, $data, $table){
+        $this->db->where($where);
+        $this->db->update($table,$data);
+    }
+    
     function tampil_conven(){
         $this->db->select('*');
         $this->db->from('convensional');
         $query = $this->db->get();
         return $query;
+    }
+
+    function input_data($data,$table){
+        $this->db->insert($table,$data);   
     }
 }
 ?>

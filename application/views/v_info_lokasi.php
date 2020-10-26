@@ -4,8 +4,8 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
 <div class="card-header py-3">
-<h6 class="m-0 font-weight-bold text-primary datatable">Data Tower</h6>
-<a href="<?php echo base_url('Data_admin/tambah')?>"><button class="btn btn-primary btn-sm btninsert" >+ Input Data</button></a>
+<h6 class="m-0 font-weight-bold text-primary datatable">Data Lokasi</h6>
+<a href="<?php echo base_url('InfoLokasi/tambah4')?>"><button class="btn btn-primary btn-sm btninsert" >+ Input Data</button></a>
 </div>
 <div class="card-body">
 <div class="table-responsive">
@@ -53,7 +53,7 @@
             <td><?php echo $baris->latitude;?></td>
             <td><?php echo $baris->longitude;?></td>
             <td><?php echo $baris->nama_site;?></td>
-            <td><?php echo $baris->nama_tower;?> & <?php echo $baris->tinggi_tow;?></td>
+            <td><?php echo $baris->nama_tower;?> & <?php echo $baris->tinggi_tow;?>m</td>
             <td><?php echo $baris->type_tow;?></td>
             <td><?php echo $baris->nama_combiner;?></td>
             <td><?php echo $baris->jumlah_cb;?></td>
@@ -61,9 +61,9 @@
             <td>
             <?php
                    
-                 echo '<a href="'.base_url('Data_admin/edit/'.$baris->id_lokasi).'" class="btn btn-success btn-icon-split"><i class="fas fa-edit" style="padding: 5px;"></i></a>';
+                 echo '<a href="'.base_url('InfoLokasi/edit/'.$baris->id_lokasi).'" class="btn btn-success btn-icon-split"><i class="fas fa-edit" style="padding: 5px;"></i></a>';
                  echo "  ";
-                echo '<a href="'.base_url('Data_admin/hapus/'.$baris->id_lokasi).'" class="btn btn-danger btn-icon-split"><i class="fas fa-trash" style="padding: 5px;"></i></a>';
+                echo '<a href="'.base_url('InfoLokasi/hapus/'.$baris->id_lokasi).'" class="btn btn-danger btn-icon-split"><i class="fas fa-trash" style="padding: 5px;"></i></a>';
                     
             ?>
             
